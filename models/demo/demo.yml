@@ -2,7 +2,7 @@ version: 2
 
 models: 
   - name: employee 
-    description: "Employee DBT model"
+    description: "Employee DBT Model"
     columns:
       - name: emp_id 
         data_tests:
@@ -15,7 +15,9 @@ models:
         data_tests: 
           - salary_check
   - name: customer 
-    description: "DBT model for the customer table"
+    description: "DBT Model for the customer table"
+  - name: customer_view 
+    description: "DBT Model for customer_view"
 sources: 
   - name: employee 
     database: DBT_DB 
