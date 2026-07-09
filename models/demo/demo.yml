@@ -18,6 +18,16 @@ models:
     description: "DBT Model for the customer table"
   - name: customer_view 
     description: "DBT Model for customer_view"
+  - name: sales
+    description: "DBT Model for the sales table"
+  - name: product 
+    description: "DBT Model for product table"
+  - name: purchase 
+    description: "DBT Model for purchase table"
+  - name: clean_orders 
+    description: "DBT Ephemeral Model for Clean orders"
+  - name: final_orders 
+    description: "DBT Model for final orders"
 sources: 
   - name: employee 
     database: DBT_DB 
@@ -28,5 +38,29 @@ sources:
     database: DBT_DB 
     schema: PUBLIC 
     tables: 
-
       - name: CUSTOMER_SRC 
+  - name: sales 
+    database: DBT_DB 
+    schema: PUBLIC 
+    tables: 
+      - name: SALES_SRC 
+  - name: product 
+    database: DBT_DB 
+    schema: PUBLIC 
+    tables: 
+      - name: PRODUCT_SRC
+  - name: purchase 
+    database: DBT_DB 
+    schema: PUBLIC 
+    tables: 
+      - name: PURCHASE_SRC
+  - name: orders 
+    database: DBT_DB 
+    schema: PUBLIC 
+    tables: 
+      - name: BASE_ORDERS
+  - name: patients
+    database: DBT_DB 
+    schema: PUBLIC 
+    tables: 
+      - name: PATIENT_SRC
