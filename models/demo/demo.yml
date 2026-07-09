@@ -28,6 +28,12 @@ models:
     description: "DBT Ephemeral Model for Clean orders"
   - name: final_orders 
     description: "DBT Model for final orders"
+  - name: session 
+    description: "DBT Model for the session table"
+  - name: concat_name 
+    description: "DBT Model for concat name"
+  - name: concat_address
+    description: 'DBT Model for concat address'
 sources: 
   - name: employee 
     database: DBT_DB 
@@ -64,3 +70,8 @@ sources:
     schema: PUBLIC 
     tables: 
       - name: PATIENT_SRC
+  - name: session
+    database: DBT_DB
+    schema: PUBLIC 
+    tables: 
+      - name: SESSION_SRC
